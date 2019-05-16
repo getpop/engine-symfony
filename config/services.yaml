@@ -1,5 +1,5 @@
 services:
-    \PoP\Engine\Contracts\PersistentCacheItemPool:
+    persistent_cache_item_pool:
         class: \Symfony\Component\Cache\Adapter\FilesystemAdapter
-    \PoP\Engine\Contracts\RequestCacheItemPool:
+    request_cache_item_pool:
         class: \Symfony\Component\Cache\Adapter\ArrayAdapter
