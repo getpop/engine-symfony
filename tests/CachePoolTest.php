@@ -2,8 +2,8 @@
 declare(strict_types=1);
 namespace PoP\SymfonyEngine;
 
-use PoP\Engine\Facades\PersistentCacheItemPool;
-use PoP\Engine\Facades\RequestCacheItemPool;
+use PoP\Engine\Facades\PersistentCacheItemPoolFacade;
+use PoP\Engine\Facades\RequestCacheItemPoolFacade;
 
 class CachePoolTestCase extends \PHPUnit\Framework\TestCase
 {
@@ -12,7 +12,7 @@ class CachePoolTestCase extends \PHPUnit\Framework\TestCase
      */
     public function testPersistentCacheItemPool(): void
     {
-        $cacheitempool = PersistentCacheItemPool::getInstance();
+        $cacheitempool = PersistentCacheItemPoolFacade::getInstance();
         $cacheitem = $cacheitempool->getItem('foo');
         $cacheitem->set('bar');
         $this->assertEquals(
@@ -26,7 +26,7 @@ class CachePoolTestCase extends \PHPUnit\Framework\TestCase
      */
     public function testRequestCacheItemPool(): void
     {
-        $cacheitempool = RequestCacheItemPool::getInstance();
+        $cacheitempool = RequestCacheItemPoolFacade::getInstance();
         $cacheitem = $cacheitempool->getItem('foo');
         $cacheitem->set('bar');
         $this->assertEquals(
