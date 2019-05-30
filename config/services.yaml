@@ -1,8 +1,7 @@
 services:
-    _defaults:
-        public: true
-
     persistent_cache_item_pool:
         class: \Symfony\Component\Cache\Adapter\FilesystemAdapter
+        public: true
     request_cache_item_pool:
         class: \Symfony\Component\Cache\Adapter\ArrayAdapter
+        public: true
