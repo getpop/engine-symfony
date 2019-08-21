@@ -2,8 +2,8 @@
 declare(strict_types=1);
 namespace PoP\SymfonyEngine;
 
-use PoP\Engine\Facades\PersistentCacheItemPoolFacade;
-use PoP\Engine\Facades\RequestCacheItemPoolFacade;
+use PoP\ComponentModel\Facades\PersistentCacheItemPoolFacade;
+use PoP\ComponentModel\Facades\RequestCacheItemPoolFacade;
 
 class CachePoolTestCase extends \PHPUnit\Framework\TestCase
 {
