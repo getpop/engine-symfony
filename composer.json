@@ -28,7 +28,7 @@
         "squizlabs/php_codesniffer": "^3.0"
     },
     "provide": {
-        "getpop/engine-contracts-implementation": "dev-master"
+        "getpop/virtual-engine-cache-service-implementation": "dev-master"
     },
     "autoload": {
         "psr-4": {
