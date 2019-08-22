@@ -20,7 +20,6 @@
     "prefer-stable": true,
     "require": {
         "php": "~7.1",
-        "getpop/engine": "dev-master",
         "symfony/cache": "^4.3"
     },
     "require-dev": {
