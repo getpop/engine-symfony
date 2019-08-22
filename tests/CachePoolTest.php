@@ -3,7 +3,7 @@ declare(strict_types=1);
 namespace PoP\SymfonyEngine;
 
 use PoP\ComponentModel\Facades\PersistentCacheItemPoolFacade;
-use PoP\ComponentModel\Facades\RequestCacheItemPoolFacade;
+use PoP\ComponentModel\Facades\MemoryManagerItemPoolFacade;
 
 class CachePoolTestCase extends \PHPUnit\Framework\TestCase
 {
@@ -24,14 +24,14 @@ class CachePoolTestCase extends \PHPUnit\Framework\TestCase
     /**
      * Test that the cache returns the same set value
      */
-    public function testRequestCacheItemPool(): void
+    public function testMemoryManagerItemPool(): void
     {
-        $cacheitempool = RequestCacheItemPoolFacade::getInstance();
-        $cacheitem = $cacheitempool->getItem('foo');
-        $cacheitem->set('bar');
+        $memoryitempool = MemoryManagerItemPoolFacade::getInstance();
+        $memoryitem = $memoryitempool->getItem('foo');
+        $memoryitem->set('bar');
         $this->assertEquals(
             'bar',
-            $cacheitem->get()
+            $memoryitem->get()
         );
     }
 }
