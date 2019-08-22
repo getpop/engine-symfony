@@ -26,9 +26,6 @@
         "phpunit/phpunit" : ">=7.0",
         "squizlabs/php_codesniffer": "^3.0"
     },
-    "provide": {
-        "getpop/virtual-engine-persistentcache-service-implementation": "dev-master"
-    },
     "autoload": {
         "psr-4": {
             "PoP\\SymfonyEngine\\": "src"
